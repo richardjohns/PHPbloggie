@@ -13,10 +13,9 @@
 
     <pre>
       <?php
-        echo printr($_GET)
-
-        $id = $_GET['id']
-        echo $id
+        echo print_r($_GET);
+        $id = $_GET['id'];
+        // echo '$id: ' . $id;
       ?>
     </pre>
 
