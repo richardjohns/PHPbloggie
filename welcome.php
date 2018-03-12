@@ -33,11 +33,17 @@
 
     <?php
     // 3. Use returned database
-      while($row = mysqli_fetch_row($result)) {
+      while($subject = mysqli_fetch_assoc($result)) {
         // output data from each row
-          var_dump($row);
-          echo "<hr />";
+    ?>
+        <li><?php echo $subject["menu_name"]; ?></li>
+    <?php
       }
+    ?>
+
+    <?php
+      // 4. Release returned database
+      mysqli_free_result($result)
     ?>
 
     <?php echo "Welcome to the home page" ?>
